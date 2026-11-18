@@ -1,52 +1,64 @@
-<h1 align="center">🤖 Built My Own AI Chatbot – Powered by Google AI Studio!</h1>
+# 🤖 ChatGPT Lite — Your Own AI Chatbot
 
-<p align="center">
-  🚀 AI Enthusiast | 🌐 Web Dev Explorer | 💡 Curious Mind
-</p>
+> **A mini ChatGPT you can run yourself — chat with Google's Gemini through a clean, modern chat interface.**
 
----
+## Live demo
 
-### 🛠️ Project Overview
+🔗 **https://chatgpt-lite22.vercel.app/** — live and loading (verified 18 Nov 2026).
 
-Say hello to my mini version of **ChatGPT** — a simple yet powerful chatbot that can perform a variety of tasks using Google’s free AI API!
+## What it does
 
-This project was built using:
+- **Chat with an AI assistant in real time** — ask questions, get answers, keep the conversation going.
+- **Clean chat UI** — a smooth, familiar chat experience built on assistant-ui.
+- **Runs on Google's free AI API** — Google AI Studio (Gemini) answers the chats.
+- **Deployed on Vercel** — open the link above and start chatting, no install needed.
 
-- 🧠 **Google AI Studio** – for generating API keys and leveraging AI
-- ⚙️ **Assistant UI** – a clean and intuitive frontend
-- 🔗 **GitHub** – for version control and code management
-- ☁️ **Vercel** – to deploy the chatbot and make it publicly accessible
+## Tech stack
 
-It’s a great hands-on way to explore how APIs work, understand backend integrations, and get a feel for deploying real-world AI apps — all in one go! 🚀
+- **Next.js 15** (Turbopack) + **React 19** + **TypeScript**
+- **assistant-ui** (`@assistant-ui/react`) — the chat interface
+- **Vercel AI SDK** (`ai`) with **Google** (`@ai-sdk/google`) and **OpenAI** (`@ai-sdk/openai`) providers
+- **Tailwind CSS 4**
 
----
+## How to run
 
-### 🎯 Key Features
+```bash
+cd my-app
+npm install
+```
 
-- Chat with an AI assistant in real-time  
-- Clean UI for smooth interaction  
-- Deployed on the web with sharable access  
-- Beginner-friendly build using modern tools
+Create `my-app/.env.local` with your Google AI Studio API key:
 
----
+```env
+GOOGLE_GENERATIVE_AI_API_KEY=your_key_here
+```
 
-### 🌍 Live Demo
+Then start the dev server:
 
-🔗 Vercel: https://chatgpt-lite22.vercel.app/
+```bash
+npm run dev
+```
 
-📦 GitHub Repo: https://github.com/MSAbhishek22/chatgpt_lite
+Open [http://localhost:3000](http://localhost:3000) and start chatting.
 
----
+Other scripts:
 
-### 📬 Let’s Connect
+```bash
+npm run build  # production build
+npm run start  # serve the production build
+npm run lint   # lint
+```
+
+## Project layout
+
+```
+my-app/
+  app/         Next.js App Router — chat page + API routes
+  components/  Chat UI (assistant-ui)
+  lib/         Helpers
+```
+
+## Connect
 
 - 💼 LinkedIn: https://www.linkedin.com/in/m-s-abhishek22/
-- 📧 msabhishekanni10@gmail.com 
-  
-
----
-
-### ⚡ Closing Thoughts
-
-This is just the beginning — building small, smart tools to learn and grow every day. If you're also experimenting with AI, APIs, or anything tech — let’s connect and grow together!
-
+- 📧 msabhishekanni10@gmail.com
